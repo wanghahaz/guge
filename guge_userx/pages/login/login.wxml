@@ -1,0 +1,62 @@
+<view class="login">
+    <!--头部logo-->
+    <view class="logo">
+        <image src="../../static/img/login/dalogo.png" />
+    </view>
+    <!--中间内容-->
+    <view class="arrogant">
+        <view class="arrogantone">
+            <image src="../../static/img/login/shouji.png" />
+            <input class="shouji" type="number" maxlength="11" placeholder="{{phValue}}" value="{{userPhone}}" bindinput="userNameInput" />
+        </view>
+        <view class="arrogantone">
+            <image class="yanzheng" src="../../static/img/login/yanzheng.png" />
+            <input class="code" type="number" placeholder="{{coValue}}" value="{{userCode}}" bindinput="userCodeInput" />
+            <image class="huoqu" src="../../static/img/login/huoqu.png" bindtap="findCode" hidden="{{bol}}" />
+            <view class="count" hidden="{{!bol}}">{{countDownNum}}s</view>
+        </view>
+        <view class="denglu" bindtap="loginUser">
+            <image src="../../static/img/login/denglu.png" />
+        </view>
+        <view class="skip" bindtap="goIndex">
+            <text style="text-decoration:underline;">跳过</text> >>
+        </view>
+    </view>
+    <view class="foot">
+        <view class="shang">
+            <image src="../../static/img/login/shang.png" />
+            <text>律所孵化</text>
+        </view>
+        <view class="gu">
+            <image src="../../static/img/login/gu.png" />
+            <text>技术支持</text>
+        </view>
+        <view class="yun">
+            <image src="../../static/img/login/yun.png" />
+            <text>云计算支持</text>
+        </view>
+        <view class="fa">
+            <image src="../../static/img/login/fa.png" />
+            <text>电子签约支持</text>
+        </view>
+    </view>
+    <!-- 协议 -->
+    <view class="agreement">
+        <view class="agreementleft">
+            <image src="../../static/img/activate/Group.png" hidden="{{tick}}" bindtap="onTick" />
+            <image src="../../static/img/activate/oval.png" hidden="{{!tick}}" bindtap="onTicka" />
+        </view>
+        <view class="agreementright">
+            <text style="color: gray;">同意</text>
+            <text bindtap="goProtocol" style="text-decoration:underline;">《用户协议》</text>
+            <text style="color: gray;">及</text>
+            <text bindtap='goprivacy' style="text-decoration:underline;">《隐私政策》</text>
+        </view>
+    </view>
+
+    
+    <!--授权-->
+    <view class='warp' hidden='{{eye}}'>
+        <button open-type="getUserInfo" hover-class='none' bindgetuserinfo="getUserInfoFun">.</button>
+    </view>
+</view>

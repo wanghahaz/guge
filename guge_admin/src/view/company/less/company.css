@@ -1,0 +1,379 @@
+.company_header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.company_header .company_header_add {
+  width: 100px;
+  height: 30px;
+  background: #346EBC;
+  box-shadow: 0 2px 6px 0 rgba(52, 110, 188, 0.3);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+.company_header .company_header_add img {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+.company_header .company_header_search {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.company_header .company_header_search .Select,
+.company_header .company_header_search .Input {
+  width: 250px;
+  height: 34px;
+  margin-right: 20px;
+}
+.company_header .company_header_search .company_header_search_btn {
+  width: 78px;
+  height: 34px;
+  background: #346EBC;
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+.company_header .company_header_search .company_header_search_btn img {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+.company_Card {
+  width: 100%;
+  min-height: 750px;
+  margin-top: 15px;
+}
+.company_Card .company_Card_header {
+  width: 100%;
+  height: 92px;
+  border: 1px solid gainsboro;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.company_Card .company_Card_header .company_Card_header_right {
+  margin-right: 20px;
+}
+.company_Card .company_Card_header .company_Card_header_right div {
+  background: #FFFFFF;
+  border: 1px solid #346EBC;
+  border-radius: 3px;
+  width: 110px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #346EBC;
+}
+.company_Card .company_Card_header .company_Card_header_right div img {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+.company_Card .company_Card_header .company_Card_header_right div:hover {
+  background: #346EBC;
+  border-radius: 3px;
+  color: #FFFFFF;
+}
+.company_Card .company_Card_header .company_Card_header_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.company_Card .company_Card_header .company_Card_header_left .company_Card_header_left_btn {
+  width: 110px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+  font-size: 14px;
+  border: 1px solid #346EBC;
+  border-radius: 3px;
+  color: #346EBC;
+}
+.company_Card .company_Card_header .company_Card_header_left .company_Card_header_left_btn img {
+  width: 18px;
+  height: 15px;
+  margin-right: 5px;
+}
+.company_Card .company_Card_header .company_Card_header_left .company_Card_header_left_btn:nth-child(3) {
+  border: 1px solid #346EBC;
+  border-radius: 3px;
+  color: #346EBC;
+}
+.company_Card .company_Card_header .company_Card_header_left .company_Card_header_left_btn:hover {
+  opacity: 0.9;
+  background: #346EBC;
+  border-radius: 3px;
+  color: #FFFFFF;
+}
+.company_Card .company_Card_header .company_Card_header_left .company_Card_header_left_user {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.company_Card .company_Card_header .company_Card_header_left .company_Card_header_left_user .home-user {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+.company_Card .company_Card_header .company_Card_header_left .company_Card_header_left_user .user_msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.company_Card .company_Card_header .company_Card_header_left .company_Card_header_left_user .user_msg .company_name {
+  font-size: 21px;
+  color: #4B4B4B;
+  font-family: MicrosoftYaHei;
+  margin-bottom: 10px;
+  width: 350px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.company_Card .company_Card_header .company_Card_header_left .company_Card_header_left_user .user_msg div {
+  display: flex;
+}
+.company_Card .company_Card_header .company_Card_header_left .company_Card_header_left_user .user_msg div span {
+  font-family: MicrosoftYaHei;
+  font-size: 14px;
+  color: #999999;
+}
+.company_Card .company_Card_header .company_Card_header_left .company_Card_header_left_user .user_msg div div {
+  padding: 0 20px;
+  border-left: 1px solid gainsboro;
+}
+.company_Card .company_Card_header .company_Card_header_left .company_Card_header_left_user .user_msg div div img {
+  width: 18px;
+  height: 18px;
+}
+.company_Card .company_Card_header .company_Card_header_left .company_Card_header_left_user .user_msg div div:nth-child(2) {
+  margin-left: 20px;
+}
+.company_Card .company_content {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+.company_Card .company_content .company_content_msg:nth-child(1) .company_content_title {
+  background: rgba(127, 203, 207, 0.2);
+}
+.company_Card .company_content .company_content_msg:nth-child(2) .company_content_title {
+  background: rgba(237, 157, 121, 0.2);
+}
+.company_Card .company_content .company_content_msg:nth-child(3) .company_content_title {
+  background: rgba(233, 208, 161, 0.2);
+}
+.company_Card .company_content .company_content_msg:nth-child(4) .company_content_title {
+  background: rgba(192, 206, 146, 0.2);
+}
+.company_Card .company_content .company_content_msg {
+  width: 23%;
+  box-sizing: border-box;
+  height: 264px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 4px 0 #EEEEEE;
+}
+.company_Card .company_content .company_content_msg .number {
+  width: 100%;
+  height: 160px;
+  border: 1px solid #F5F5F5;
+  font-family: MicrosoftYaHei-Bold;
+  font-size: 42px;
+  color: #4B4B4B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.company_Card .company_content .company_content_msg .number input,
+.company_Card .company_content .company_content_msg .number .Select {
+  width: 50%;
+  z-index: 4;
+}
+.company_Card .company_content .company_content_msg .number input {
+  border: 1px solid ghostwhite;
+  border-radius: 3px;
+}
+.company_Card .company_content .company_content_msg .number span {
+  width: 89%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+}
+.company_Card .company_content .company_content_msg .company_content_title {
+  width: 100%;
+  height: 64px;
+  font-family: MicrosoftYaHei;
+  font-size: 18px;
+  color: #4B4B4B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.company_Card .company_content .company_content_msg .company_content_title div {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 30px 0.75px 0.75px 0px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.company_Card .company_content .company_content_msg .company_content_title div img {
+  width: 28px;
+  height: 28px;
+}
+.company_content_model {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 3;
+}
+.model {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+}
+.addcompany {
+  width: 720px;
+  height: 387px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+.model_content {
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+}
+.model_content::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 4px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+}
+.model_content::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+}
+.model_content::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+.model_top {
+  width: 100%;
+  opacity: 0.75;
+  background: #346EBC;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.model_top_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+.model_top_title img {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+.model_top_off {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.model_operation {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.model_operation_confirm {
+  background: #346EBC;
+  border-radius: 3px;
+  width: 78px;
+  height: 34px;
+  font-size: 16px;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+}
+.model_operation_cancel {
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  width: 78px;
+  height: 34px;
+  font-size: 16px;
+  color: #BBBBBB;
+  background: white;
+  margin-left: 50px;
+}
+.model_content_supportiveShow_Ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.model_content_supportiveShow_Ul li {
+  width: 90px;
+  height: 36px;
+  border-radius: 3px;
+  background: #F7F7F7;
+  text-align: center;
+  line-height: 36px;
+  font-size: 16px;
+  color: #999999;
+}
+.model_content_supportiveShow_Ul li:hover {
+  background: #346EBC !important;
+  color: white !important;
+}
+.supportiveShow_li {
+  background: #346EBC !important;
+  color: white !important;
+}

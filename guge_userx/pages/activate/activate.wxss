@@ -1,0 +1,622 @@
+.activate {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*头部文字*/
+
+.header {
+    text-align: center;
+    font-size: 36rpx;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 54rpx;
+    margin-top: 60rpx;
+}
+
+
+/*中间内容*/
+
+.main {
+    width: 638rpx;
+    height: 727rpx;
+    margin: auto;
+    margin-top: 49rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainone {
+    width: 100%;
+    height: 120rpx;
+    border: 1rpx solid #C5C5C5;
+    border-radius: 10rpx;
+    display: flex;
+    justify-content: space-between;
+    font-size: 32rpx;
+    color: #8E8E8E;
+}
+
+.maintop {
+    width: 80rpx;
+    height: 100%;
+    display: flex;
+}
+
+.maintop>image {
+    width: 30rpx;
+    height: 30rpx;
+    margin: auto;
+}
+
+.mainbottom {
+    flex: 2;
+    height: 100%;
+    line-height: 45rpx;
+}
+
+
+/*底部二维码*/
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 96rpx;
+    margin-bottom: 96rpx;
+}
+
+.footer>image {
+    width: 147rpx;
+    height: 147rpx;
+    margin: auto;
+}
+
+.footer>view {
+    font-size: 24rpx;
+    color: #8E8E8E;
+    text-align: center;
+    margin-top: 11rpx;
+}
+
+
+/*选项A弹框*/
+
+.mark {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+.mark_content {
+    width: 670rpx;
+    height: 1000rpx;
+    background: #ffffff;
+    margin: auto;
+    border-radius: 10rpx;
+    /*overflow: auto;*/
+    overflow-y: scroll;
+    position: relative;
+    top: 50%;
+    margin-top: -500rpx;
+}
+.close {
+    width: 27rpx;
+    height: 27rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 35rpx;
+}
+
+.xinxi {
+    width: 100%;
+    font-weight: bold;
+    font-size: 36rpx;
+    color: #333333;
+    line-height: 54rpx;
+    text-align: center;
+    padding: 31rpx 0 17rpx 0;
+}
+
+.marktop {
+    /* width: 645rpx;
+    height: 430rpx; */
+    /* margin: 0 0 0 24rpx; */
+    display: flex;
+    flex-direction: column;
+}
+
+.markone {
+    width: 100%;
+    height: 86rpx;
+    border-bottom: 1rpx solid #E7E7E7;
+    display: flex;
+    justify-content: space-between;
+}
+
+.marktop .markone>input {
+    width: 75%;
+    height: 86rpx;
+}
+
+.word {
+    font-size: 32rpx;
+    color: #333333;
+    line-height: 86rpx;
+}
+
+.markoneO {
+    display: flex;
+}
+
+.markcenter {
+    width: 100%;
+    height: 20rpx;
+    background: #F2F2F2;
+}
+
+.markbottomone {
+    /* width: 645rpx;
+    height: 430rpx;
+    margin: 0 0 0 24rpx; */
+    display: flex;
+    flex-direction: column;
+}
+
+.markbottomone .markone>input {
+    width: 71%;
+    height: 86rpx;
+}
+
+.shuoming {
+    /* width: 100%; */
+    /* height: 86rpx; */
+    /*169*/
+    /* border: none; */
+}
+
+.shuoming input {
+    width: 71%;
+    height: 100%;
+}
+
+.markbottomtwo {
+    height: 256rpx;
+    width: 100%;
+}
+
+.pp {
+    font-size: 28rpx;
+    color: #333333;
+    line-height: 48rpx;
+}
+
+.bottommain {
+    display: flex;
+}
+
+.span {
+    position: relative;
+    border: 1px solid #C5C5C5;
+    border-radius: 10rpx;
+    width: 252rpx;
+    height: 76rpx;
+    margin-left: 27rpx;
+    margin-top: 10rpx;
+    display: flex;
+    justify-content: space-around;
+}
+
+.spantop {
+    width: 60rpx;
+    height: 100%;
+    display: flex;
+}
+
+.spantop>image {
+    width: 28rpx;
+    height: 28rpx;
+    margin: auto;
+}
+
+.spanbottom {
+    flex: 2;
+    font-size: 28rpx;
+    line-height: 76rpx;
+}
+
+.markbottomthree {
+    width: 100%;
+    height: 441rpx;
+}
+
+.ppp {
+    font-size: 28rpx;
+    color: #333333;
+    line-height: 48rpx;
+}
+
+.markbottomthree .markone {
+    border-bottom: 1px solid #E7E7E7;
+    display: flex;
+    justify-content: space-between;
+}
+
+.markbottomthree .markone>input {
+    width: 63%;
+    height: 100%;
+}
+
+.foot {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 134rpx;
+    text-align: center;
+    background: #fff;
+    border-radius: 10rpx;
+    z-index: 888;
+}
+
+.foot>button {
+    font-size: 36rpx;
+    width: 590rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    letter-spacing: 2rpx;
+    color: #fff;
+    background: #80C9CD;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 24rpx;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+
+/*选项B*/
+
+.consumer {
+    width: 100%;
+    /*298*/
+}
+
+.consumertop {
+    height: 127rpx;
+    border-bottom: 1rpx solid #E7E7E7;
+    display: flex;
+    justify-content: space-between;
+}
+
+.consumerone {
+    font-size: 32rpx;
+    color: #333333;
+}
+
+.consumertop>input {
+    width: 45%;
+    height: 100%;
+}
+
+.consumerone>view:first-child {
+    margin-top: 27rpx;
+}
+
+.consumerbottom {
+    width: 645rpx;
+    height: 96rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.consumerbottom input {
+    width: 71%;
+    height: 100%;
+}
+
+.markbottoma {
+    width: 100%;
+}
+
+.markbottoma>view {
+    font-size: 32rpx;
+    color: #333333;
+    line-height: 48rpx;
+    margin-top: 27rpx;
+}
+
+.section {
+    width: 71%;
+    height: 100%;
+}
+
+.section>picker {
+    width: 100%;
+    height: 100%;
+}
+
+.picker {
+    width: 100%;
+    height: 86rpx;
+    line-height: 86rpx;
+}
+
+.markk {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 0;
+}
+
+.bottom {
+    border-radius: 10rpx;
+    background: #80C9CD;
+    color: #fff;
+}
+
+
+/* 退出登录 */
+
+.markkk {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    display: flex;
+}
+
+.markkk .mark_content {
+    position: relative;
+    top: 50%;
+    width: 670rpx;
+    height: 544rpx;
+    background: #FFFFFF;
+    border-radius: 0.63rem;
+    margin: auto;
+    margin-top: -272rpx;
+    text-align: center;
+}
+
+.markkk .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 27rpx;
+    height: 27rpx;
+    padding: 35rpx;
+}
+
+.markkk .clickDimissionP {
+    font-size: 36rpx;
+    color: #333333;
+    padding-top: 201rpx;
+}
+
+.markkk .dimissionfoot {
+    width: 622rpx;
+    height: 90rpx;
+    margin: auto;
+    margin-top: 60rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dimissionfoot>view {
+    width: 302rpx;
+    height: 100%;
+    line-height: 90rpx;
+    border-radius: 10rpx;
+    border: 2rpx solid #80C9CD;
+    font-size: 36rpx;
+    color: #FFFFFF;
+    letter-spacing: 2rpx;
+}
+
+.box {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    display: flex;
+}
+
+.box_content {
+    position: relative;
+    top: 50%;
+    width: 670rpx;
+    height: 544rpx;
+    background: #FFFFFF;
+    border-radius: 0.63rem;
+    margin: auto;
+    margin-top: -272rpx;
+    text-align: center;
+}
+
+.fenhong {
+    font-size: 36rpx;
+    color: #333333;
+    line-height: 54rpx;
+    padding-top: 31rpx;
+    margin-bottom: 81rpx;
+}
+
+.dimission {
+    font-size: 28rpx;
+    color: #333333;
+    line-height: 48rpx;
+}
+
+.base {
+    width: 622rpx;
+    height: 90rpx;
+    border-radius: 10rpx;
+    background: #80C9CD;
+    color: #fff;
+    margin: auto;
+    line-height: 90rpx;
+    margin-top: 92rpx;
+    font-size: 32rpx;
+}
+.textBox{
+	width: 100%;
+	height: 100rpx;
+	background: #FFFFFF;
+}
+.back-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    background: rgba(0,0,0,0.40);
+}
+
+.release {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20rpx 12rpx;
+    background: #FFFFFF;
+}
+
+.release .text {
+    background: #F7F7F7;
+    border-radius: 8rpx;
+    width: 612rpx;
+    /* min-height: 40rpx;
+    max-height: 120rpx; */
+	height: 120rpx;
+    border-width: 10rpx 20rpx;
+    border-style: solid;
+    border-color: #F7F7F7;
+    line-height: 40rpx;
+    font-family: PingFangSC-Regular;
+    font-size: 28rpx;
+    color: #333333;
+}
+
+.release .submit {
+    width: 138rpx;
+    font-family: PingFangSC-Regular;
+    font-size: 32rpx;
+    color: #80C9CD;
+    text-align: center;
+    height: 64rpx;
+    line-height: 64rpx;
+}
+
+.input_null {
+    margin-left: 12rpx;
+    font-family: PingFangSC-Regular;
+    font-size: 28rpx;
+    color: #939393;
+}
+.model{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10000;
+	background: rgba(0,0,0,0.40);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.model_content {
+    width: 670rpx;
+    height: 1000rpx;
+    background: #ffffff;
+    border-radius: 10rpx;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+.model_content_top{
+	width: 100%;
+	height: 100rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 35rpx;
+	box-sizing: border-box;
+	font-size: 36rpx;
+	color: #333333;
+	font-weight: bold;
+}
+.model_content_top image{
+	width: 30rpx;
+	height: 30rpx;
+}
+.model_content_form{
+	width: 100%;
+	flex: 1;
+	overflow: scroll;
+	padding: 0 35rpx;
+	box-sizing: border-box;
+}
+.model_content_form_btn{
+	position: sticky;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 134rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #FFFFFF;
+	border-radius: 10rpx;
+}
+.model_content_form_btn>button {
+    font-size: 36rpx;
+    width: 590rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    letter-spacing: 2rpx;
+    color: #fff;
+    background: #80C9CD;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 24rpx;
+}
+.qita{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.qita>view:nth-child(2){
+	width: 100%;
+	/* height: 180rpx; */
+	min-height: 60rpx;
+	background: #FFFFFF;
+	font-size: 28rpx;
+}

@@ -1,0 +1,15 @@
+.content {
+    width: 95%;
+    margin: 14rpx 0 0 2.5%;
+    font-size: 30rpx;
+    border-bottom: 1px solid #dcdee2;
+    padding-bottom: 14rpx;
+}
+
+.content>view:nth-of-type(1) {
+    margin-bottom: 8rpx;
+}
+
+.content>view:nth-of-type(2) {
+    display: flex;
+}

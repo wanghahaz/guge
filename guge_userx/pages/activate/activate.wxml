@@ -1,0 +1,460 @@
+<view class="{{showSearchView==0?'markk':'activate'}}">
+    <!-- 头部文字 -->
+    <view class="header">
+        <view>欢迎使用“股格|期管云”在线期权管理软件。</view>
+        <view>您希望通过哪种方式激活“期管云”？</view>
+    </view>
+    <!-- 温馨提示 -->
+    <view class="box" hidden="{{alertHint}}" catchtouchmove="move">
+        <view class="box_content">
+            <image class="close" src="../../static/img/activate/close.png" bindtap="closeHint" />
+            <view class="fenhong" style="margin-bottom:118rpx;">温馨提示：</view>
+            <view class="dimission">
+                <view>您需要首先注册，</view>
+                <view>才可以继续使用“期管云”。</view>
+            </view>
+            <view class="base" style="letter-spacing: 2px;margin-top:110rpx" bindtap="goLogin">
+                好的，我现在就去注册
+            </view>
+        </view>
+    </view>
+    <!-- 中间内容 -->
+    <view class="main">
+        <view class="mainone" bindtap="bounceA">
+            <view class="maintop">
+                <image src="../../static/img/activate/oval.png" hidden="{{pictureA}}" />
+                <image src="../../static/img/activate/Group.png" hidden="{{!pictureA}}" />
+            </view>
+            <view class="mainbottom">
+                <view style="margin-top: 15rpx">我是公司的期权激励对象，</view>
+                <view>想通过“期管云”自助填写管理</view>
+            </view>
+        </view>
+        <view class="mainone" style="margin-top: 28rpx" bindtap="bounceB">
+            <view class="maintop">
+                <image src="../../static/img/activate/oval.png" hidden="{{pictureB}}" />
+                <image src="../../static/img/activate/Group.png" hidden="{{!pictureB}}" />
+            </view>
+            <view class="mainbottom">
+                <view style="margin-top: 15rpx">我是公司的创始人/负责人，</view>
+                <view>想通过“期管云”管理公司期权</view>
+            </view>
+        </view>
+        <view class="mainone" style="margin-top: 28rpx" bindtap="bounceC">
+            <view class="maintop">
+                <image src="../../static/img/activate/oval.png" hidden="{{pictureC}}" />
+                <image src="../../static/img/activate/Group.png" hidden="{{!pictureC}}" />
+            </view>
+            <view class="mainbottom">
+                <view style="margin-top: 15rpx">我是律师/咨询顾问/投资机构，</view>
+                <view>想通过“期管云”为我的客户管理期权</view>
+            </view>
+        </view>
+        <view class="mainone" style="margin-top: 28rpx" bindtap="bounceD">
+            <view class="maintop">
+                <image src="../../static/img/activate/oval.png" hidden="{{pictureD}}" />
+                <image src="../../static/img/activate/Group.png" hidden="{{!pictureD}}" />
+            </view>
+            <view class="mainbottom">
+                <view style="line-height: 120rpx">其他，我有一些定制的需求</view>
+            </view>
+        </view>
+        <view class="mainone" style="margin-top: 28rpx" bindtap="skip">
+            <view class="mainbottom bottom">
+                <view style="line-height: 120rpx;text-align: center;letter-spacing: 8rpx">
+                    退出登录
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 底部二维码 -->
+    <view class="footer">
+        <image src="../../static/img/activate/ma.png" />
+        <view>客服电话/微信：19920199920</view>
+    </view>
+    <!-- 退出 -->
+    <view class="markkk" hidden="{{quitRegister}}" catchtouchmove="move">
+        <view class="mark_content">
+            <image class="close" src="../../static/img/activate/close.png" bindtap="closeloginOut" />
+            <view class="clickDimissionP">您确定要退出吗？</view>
+            <view class="dimissionfoot" style="margin-top: 167rpx">
+                <view style="background: #80C9CD;" bindtap="loginOut">确定</view>
+                <view style="color: #80C9CD;" bindtap="closeloginOut">取消</view>
+            </view>
+        </view>
+    </view>
+    <!-- 选项A的弹框 -->
+    <view class="model" hidden="{{alertMarkA}}">
+    	<!-- 内容 -->
+    	<view class="model_content">
+    		<!-- 头部 -->
+    		<view class="model_content_top">
+    			<view></view>
+    			<view>请填写您的信息</view>
+    			<image src="../../static/img/activate/close.png" bindtap="closeBounce" />
+    		</view>
+    		<!-- 表单 -->
+    		<view class="model_content_form">
+    			<form bindsubmit="formSubmit">
+    			    <view class="marktop">
+    			        <view class="markone">
+    			            <view class="markoneO">
+    			                <view class="word">姓名</view>
+    			                <view style="color: red;line-height: 100rpx;">*</view>
+    			            </view>
+    			            <input type="text" maxlength="5" name="nameA" />
+    			        </view>
+    			        <view class="markone">
+    			            <view>
+    			                <view class="word">职务</view>
+    			            </view>
+    			            <input type="text" name="postA" />
+    			        </view>
+    			        <view class="markone">
+    			            <view class="markoneO">
+    			                <view class="word">联系电话</view>
+    			                <view style="color: red;line-height: 100rpx;">*</view>
+    			            </view>
+    			            <input type="number" name="phoneA" maxlength="11" />
+    			        </view>
+    			        <view class="markone">
+    			            <view>
+    			                <view class="word">微信</view>
+    			            </view>
+    			            <input type="text" name="wechatA" />
+    			        </view>
+    			        <view class="markone" style="border: none;">
+    			            <view class="markoneO">
+    			                <view class="word">公司名称</view>
+    			                <view style="color: red;line-height: 100rpx;">*</view>
+    			            </view>
+    			            <input type="text" name="companyNameA" />
+    			        </view>
+    			    </view>
+    			    <view class="markcenter"></view>
+    			    <view class="markbottomone dingwei">
+    			        <view class="markone">
+    			            <view>
+    			                <view class="word">期权授予日</view>
+    			            </view>
+    			            <view class="section">
+    			                <picker mode="date" fields="day" value="{{date}}" start="1970-01-01" bindchange="bindDateChange">
+    			                    <view class="picker">{{date}}</view>
+    			                </picker>
+    			            </view>
+    			        </view>
+    			        <view class="markone">
+    			            <view>
+    			                <view class="word">获授股数</view>
+    			            </view>
+    			            <input type="digit" name="impowerSharesNumA" />
+    			        </view>
+    			        <view class="markone">
+    			            <view>
+    			                <view class="word">成熟期</view>
+    			            </view>
+    			            <input type="digit" name="autumnA" />
+    			        </view>
+    			        <view class="markone">
+    			            <view>
+    			                <view class="word">行权价</view>
+    			            </view>
+    			            <input type="digit" name="eachAppraisementA" />
+    			        </view>
+    			        <view data-key='explainAndNeedA' data-val="{{explainAndNeedA}}" bindtap="changeCommentBox" class="qita">
+    			            <view>
+    			                <view class="word">其他说明</view>
+    			            </view>
+    						<view>{{explainAndNeedA}}</view>
+    			        </view>
+    			    </view>
+    			    <view class="markcenter"></view>
+    			    <view class="markbottomtwo" >
+    			        <view class="pp">如您需要自动识别，请上传您的期权授予协议，以及公司的期权激励计划（如有，请拍摄照片或扫描为图片上传）</view>
+    			        <view class="bottommain">
+    			            <view class="span" bindtap="uploadFileA">
+    			                <view class="spantop">
+    			                    <image src="../../static/img/activate/add.png" />
+    			                </view>
+    			                <view class="spanbottom">期权授予协议</view>
+    			            </view>
+    			            <view class="span" bindtap="uploadA">
+    			                <view class="spantop">
+    			                    <image src="../../static/img/activate/add.png" />
+    			                </view>
+    			                <view class="spanbottom">期权激励计划</view>
+    			            </view>
+    			        </view>
+    			    </view>
+    			    <view class="markcenter"></view>
+    			    <view class="markbottomthree" >
+    			        <view class="ppp">如您希望所在公司的期权激励计划正式获得“期权云”的认证和托管，请提供公司创始人/负责人的下列信息：</view>
+    			        <view class="ppp" style="color: #A1A1A1;">(我们将为您个人信息严格保密，并尽快督促公司完成期权授予认证）</view>
+    			        <view class="markone">
+    			            <view>
+    			                <view class="word">创始人/负责人</view>
+    			            </view>
+    			            <input type="text" maxlength="5" name="chargePersonNameA" />
+    			        </view>
+    			        <view class="markone">
+    			            <view>
+    			                <view class="word">联系电话</view>
+    			            </view>
+    			            <input type="number" maxlength="11" name="chargePersonPhoneA" />
+    			        </view>
+    			    </view>
+    				<view class="model_content_form_btn">
+    					<button formType="submit">立即提交</button>
+    				</view>
+    			</form>
+    		</view>
+    	</view>
+    </view>
+    <!-- 选项B的弹框 -->
+	<view class="model" hidden="{{alertMarkB}}">
+		<!-- 内容 -->
+		<view class="model_content">
+			<!-- 头部 -->
+			<view class="model_content_top">
+				<view></view>
+				<view>请填写您的信息</view>
+				<image src="../../static/img/activate/close.png" bindtap="closeBounce" />
+			</view>
+			<!-- 表单 -->
+			<view class="model_content_form">
+				<form bindsubmit="formSubmitB">
+				    <view class="marktop">
+				        <view class="markone">
+				            <view class="markoneO">
+				                <view class="word">公司名称</view>
+				                <view style="color: red;line-height: 100rpx;">*</view>
+				            </view>
+				            <input type="text" name="companyNameB" />
+				        </view>
+				        <view class="markone">
+				            <view class="markoneO">
+				                <view class="word">您的姓名</view>
+				                <view style="color: red;line-height: 100rpx;">*</view>
+				            </view>
+				            <input type="text" maxlength="5" name="nameB" />
+				        </view>
+				        <view class="markone">
+				            <view>
+				                <view class="word">职务</view>
+				            </view>
+				            <input type="text" name="postB" />
+				        </view>
+				        <view class="markone">
+				            <view class="markoneO">
+				                <view class="word">联系电话</view>
+				                <view style="color: red;line-height: 100rpx;">*</view>
+				            </view>
+				            <input type="number" maxlength="11" name="phoneB" />
+				        </view>
+				        <view class="markone" style="border: none;">
+				            <view>
+				                <view class="word">微信</view>
+				            </view>
+				            <input type="text" name="wechatB" />
+				        </view>
+				    </view>
+				    <view class="markcenter"></view>
+				    <view class="consumer">
+				        <view class="consumertop">
+				            <view class="consumerone">
+				                <view>需要开通的用户数</view>
+				                <view style="color: #999999">(公司已激励对象人数)</view>
+				            </view>
+				            <input type="number" name="userNumB" />
+				        </view>
+						<view data-key='explainAndNeedB' data-val="{{explainAndNeedB}}" bindtap="changeCommentBox" class="qita">
+						    <view>
+						        <view class="word">其他说明</view>
+						    </view>
+							<view>{{explainAndNeedB}}</view>
+						</view>
+				    </view>
+				    <view class="markcenter"></view>
+				    <view class="markbottomtwo" >
+				        <view class="pp">如您需要自动识别，请上传公司的期权激励计划，以及全部的期权授予协议（如有，请拍摄照片或扫描为图片上传）</view>
+				        <view class="bottommain">
+				            <view class="span" bindtap="uploadFileB">
+				                <view class="spantop">
+				                    <image src="../../static/img/activate/add.png" />
+				                </view>
+				                <view class="spanbottom">期权授予协议</view>
+				            </view>
+				            <view class="span" bindtap="uploadB">
+				                <view class="spantop">
+				                    <image src="../../static/img/activate/add.png" />
+				                </view>
+				                <view class="spanbottom">期权激励计划</view>
+				            </view>
+				        </view>
+				    </view>
+				    <view class="markcenter"></view>
+				    <view class="markbottoma">
+				        <view>如您还没有制定系统的期权激励计划，请登录股格官网iguge.com获取服务详情及报价</view>
+				    </view>
+				    <!-- 立即提交 -->
+					<view class="model_content_form_btn">
+						<button formType="submit">立即提交</button>
+					</view>
+				</form>
+			</view>
+		</view>
+	</view>
+    <!-- 选项C的弹框 -->
+	<view class="model" hidden="{{alertMarkC}}">
+		<!-- 内容 -->
+		<view class="model_content">
+			<!-- 头部 -->
+			<view class="model_content_top">
+				<view></view>
+				<view>请填写您的信息</view>
+				<image src="../../static/img/activate/close.png" bindtap="closeBounce" />
+			</view>
+			<!-- 表单 -->
+			<view class="model_content_form">
+				<form bindsubmit="formSubmitC">
+				    <view class="marktop">
+				        <view class="markone">
+				            <view class="markoneO">
+				                <view class="word">姓名</view>
+				                <view style="color: red;line-height: 100rpx;">*</view>
+				            </view>
+				            <input type="text" maxlength="5" name="nameC" />
+				        </view>
+				        <view class="markone">
+				            <view>
+				                <view class="word">职务</view>
+				            </view>
+				            <input type="text" name="postC" />
+				        </view>
+				        <view class="markone">
+				            <view class="markoneO">
+				                <view class="word">联系电话</view>
+				                <view style="color: red;line-height: 100rpx;">*</view>
+				            </view>
+				            <input type="number" maxlength="11" name="phoneC" />
+				        </view>
+				        <view class="markone">
+				            <view>
+				                <view class="word">微信</view>
+				            </view>
+				            <input type="text" name="wechatC" />
+				        </view>
+				        <view class="markone">
+				            <view class="markoneO">
+				                <view class="word">工作单位</view>
+				                <view style="color: red;line-height: 100rpx;">*</view>
+				            </view>
+				            <input type="text" name="companyNameC" />
+				        </view>
+				    </view>
+				    <view class="consumer">
+				        <view class="consumertop">
+				            <view class="consumerone">
+				                <view>需要开通的用户数</view>
+				                <view style="color: #999999">(公司已激励对象人数)</view>
+				            </view>
+				            <input type="number" name="userNumC" />
+				        </view>
+						<view data-key='explainAndNeedC' data-val="{{explainAndNeedC}}" bindtap="changeCommentBox" style="border-bottom: 1rpx solid #E7E7E7;" class="qita">
+						    <view>
+						        <view class="word">其他说明</view>
+						    </view>
+							<view>{{explainAndNeedC}}</view>
+						</view>
+				    </view>
+				    <!-- 立即提交 -->
+				   <view class="model_content_form_btn">
+						<button formType="submit">立即提交</button>
+				   </view>
+				</form>
+			</view>
+		</view>
+	</view>
+    <!-- 选项D的弹框 -->
+	<view class="model" hidden="{{alertMarkD}}">
+		<!-- 内容 -->
+		<view class="model_content">
+			<!-- 头部 -->
+			<view class="model_content_top">
+				<view></view>
+				<view>请填写您的信息</view>
+				<image src="../../static/img/activate/close.png" bindtap="closeBounce" />
+			</view>
+			<!-- 表单 -->
+			<view class="model_content_form">
+				<form bindsubmit="formSubmitD">
+				    <view class="marktop">
+				        <view class="markone">
+				            <view class="markoneO">
+				                <view class="word">姓名</view>
+				                <view style="color: red;line-height: 100rpx;">*</view>
+				            </view>
+				            <input type="text" maxlength="5" name="nameD" />
+				        </view>
+				        <view class="markone">
+				            <view>
+				                <view class="word">职务</view>
+				            </view>
+				            <input type="text" name="postD" />
+				        </view>
+				        <view class="markone">
+				            <view class="markoneO">
+				                <view class="word">联系电话</view>
+				                <view style="color: red;line-height: 100rpx;">*</view>
+				            </view>
+				            <input type="number" maxlength="11" name="phoneD" />
+				        </view>
+				        <view class="markone">
+				            <view>
+				                <view class="word">微信</view>
+				            </view>
+				            <input type="text" name="wechatD" />
+				        </view>
+				        <view class="markone">
+				            <view class="markoneO">
+				                <view class="word">工作单位</view>
+				                <view style="color: red;line-height: 100rpx;">*</view>
+				            </view>
+				            <input type="text" name="companyNameD" />
+				        </view>
+				    </view>
+					<view data-key='explainAndNeedD' data-val="{{explainAndNeedD}}" bindtap="changeCommentBox" style="border-bottom: 1rpx solid #E7E7E7;" class="qita">
+					    <view>
+					        <view class="word">需求描述/反馈/申诉：</view>
+					    </view>
+						<view>{{explainAndNeedD}}</view>
+					</view>
+				    <!-- 立即提交 -->
+				    <view class="foot" style="margin-top: 20rpx">
+				        <button formType="submit">立即提交</button>
+				    </view>
+				</form>
+			</view>
+		</view>
+	</view>
+	
+</view>
+<view hidden="{{CommentBox}}" catchtap="closeCommentBox" catchtouchmove="move" class="back-page" >
+    <view class="release">
+        <textarea 
+		autoFocus="{{autoFocusBol}}"
+		bindblur="hideKeyboard" 
+		bindinput="setValue" 
+		catchtap="catchBubble" 
+		class="text" 
+		cursorSpacing="20" 
+		fixed="true" 
+		focus="{{autoFocusBol}}"
+		placeholderClass="input_null" 
+		showConfirmBar="" 
+		value="{{commentValue}}"></textarea>
+        <view catchtap="checkContent" class="submit">完成</view>
+    </view>
+</view>
+
+

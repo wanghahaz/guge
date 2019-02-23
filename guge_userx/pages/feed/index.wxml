@@ -1,0 +1,8 @@
+<view class="feed">
+    <textarea bindinput="input" cols="30"  placeholder="请输入您对公司的申请/反馈/申诉等意见（不超过100字" rows="7" maxlength="100"></textarea>
+    <view class="btn">
+        <button type="primary" size='mini' bindtap="submit" hover-class="none">
+            发送
+        </button>
+    </view>
+</view>    

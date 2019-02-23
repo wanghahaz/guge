@@ -1,0 +1,51 @@
+.succeed {
+    width: 100%;
+}
+.main {
+    width: 100%;
+}
+.miantop {
+    width: 100%;
+    height: 140rpx;
+    display: flex;
+    margin-top: 191rpx;
+}
+.miantop>image {
+    width: 140rpx;
+    height: 140rpx;
+    margin: auto;
+}
+.miancenter {
+    font-size: 36rpx;
+    color: #333333;
+    line-height: 54rpx;
+    text-align: center;
+    margin-top: 58rpx;
+}
+.footer {
+    width: 590rpx;
+    height: 90rpx;
+    background: #81CACE;
+    border-radius: 10rpx;
+    margin: auto;
+    margin-top: 75rpx;
+    font-size: 36rpx;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    line-height: 90rpx;
+    text-align: center;
+}
+.logo {
+    width: 590rpx;
+    margin: auto;
+    margin-top: 269rpx;
+    text-align: center;
+}
+.logo>image{
+    width: 147rpx;
+    height: 147rpx;
+}
+.logo>view{
+    font-size: 24rpx;
+    color: #8E8E8E;
+}

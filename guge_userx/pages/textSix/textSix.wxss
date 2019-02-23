@@ -1,0 +1,33 @@
+@import "../../wxParse/wxParse.wxss";
+.tu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 30rpx;
+    color: #B4B4B4;
+    margin-top: 300rpx;
+}
+
+.tu>image {
+    width: 150rpx;
+    height: 150rpx;
+    margin: auto;
+}
+
+.tu>view {
+    margin-top: 20rpx;
+}
+
+.wxParse-body {
+    width: 90%;
+    margin: auto
+}
+
+.wxParse-body>view {
+    width: 100% !important;
+}
+
+.wxParse-body>view>image {
+    width: 100% !important;
+}

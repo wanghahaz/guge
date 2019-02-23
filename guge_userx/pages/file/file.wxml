@@ -1,0 +1,154 @@
+<view class="{{showSearchView==0?'markk':'activate'}}">
+    <!-- 头部文字 -->
+    <view class="header">
+        <view>“股格期管云”可为您提供独家定制的</view>
+        <view>股权激励全套文本。</view>
+        <view>请问您需要查看哪一份文件?</view>
+    </view>
+    <!-- 温馨提示 -->
+    <view class="box" hidden="{{alertHint}}" catchtouchmove="move">
+        <view class="box_content">
+            <image class="close" src="../../static/img/activate/close.png" bindtap="closeHint" />
+            <view class="fenhong" style="margin-bottom:118rpx;">温馨提示：</view>
+            <view class="dimission">
+                <view>您需要首先注册，</view>
+                <view>才可以继续使用“期管云”。</view>
+            </view>
+            <view class="base" style="letter-spacing: 2px;margin-top:110rpx" bindtap="goLogin">
+                好的，我现在就去注册
+            </view>
+        </view>
+    </view>
+    <!-- 中间内容 -->
+    <view class="main">
+        <view class="mainone" bindtap="skipA">
+            <view class="maintop">
+                <image src="../../static/img/activate/oval.png" hidden="{{pictureA}}" />
+                <image src="../../static/img/activate/Group.png" hidden="{{!pictureA}}" />
+            </view>
+            <view class="mainbottom">
+                <view>期权激励计划（ESOP）及相关决议</view>
+            </view>
+        </view>
+        <view class="mainone" style="margin-top: 28rpx" bindtap="skipB">
+            <view class="maintop">
+                <image src="../../static/img/activate/oval.png" hidden="{{pictureB}}" />
+                <image src="../../static/img/activate/Group.png" hidden="{{!pictureB}}" />
+            </view>
+            <view class="mainbottom">
+                <view>期权授予协议（事业合伙人共创协议）</view>
+            </view>
+        </view>
+        <view class="mainone" style="margin-top: 28rpx" bindtap="skipC">
+            <view class="maintop">
+                <image src="../../static/img/activate/oval.png" hidden="{{pictureC}}" />
+                <image src="../../static/img/activate/Group.png" hidden="{{!pictureC}}" />
+            </view>
+            <view class="mainbottom">
+                <view>劳动合同书及员工手册</view>
+            </view>
+        </view>
+        <view class="mainone" style="margin-top: 28rpx" bindtap="skipD">
+            <view class="maintop">
+                <image src="../../static/img/activate/oval.png" hidden="{{pictureD}}" />
+                <image src="../../static/img/activate/Group.png" hidden="{{!pictureD}}" />
+            </view>
+            <view class="mainbottom">
+                <view>保密、知识产权与竞业限制协议</view>
+            </view>
+        </view>
+        <view class="mainone" style="margin-top: 28rpx" bindtap="bounceD">
+            <view class="mainbottom bottom">
+                <view style="line-height: 120rpx;text-align: center;letter-spacing: 8rpx">
+                    发送至邮箱
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 底部二维码 -->
+    <view class="footer">
+        <image src="../../static/img/activate/ma.png" />
+        <view>客服电话/微信：19920199920</view>
+    </view>
+    <!-- 选项D的弹框 -->
+    <view class="mark" hidden="{{alertMarkD}}">
+        <view class="mark_content">
+            <form bindsubmit="formSubmit">
+                <image class="close" src="../../static/img/activate/close.png" bindtap="closeBounce" />
+                <view class="xinxi">请填写您的信息</view>
+                <view class="marktop">
+                    <view class="markone">
+                        <view class="markoneO">
+                            <view class="word">姓名</view>
+                            <view style="color: red;line-height: 100rpx;">*</view>
+                        </view>
+                        <input type="text" name='nameD' />
+                    </view>
+                    <view class="markone">
+                        <view>
+                            <view class="word">职务</view>
+                        </view>
+                        <input type="text" name='postD' />
+                    </view>
+                    <view class="markone">
+                        <view class="markoneO">
+                            <view class="word">联系电话</view>
+                            <view style="color: red;line-height: 100rpx;">*</view>
+                        </view>
+                        <input type="number" name='phoneD' maxlength="11" />
+                    </view>
+                    <view class="markone">
+                        <view class="markoneO">
+                            <view class="word">邮箱</view>
+                            <view style="color: red;line-height: 100rpx;">*</view>
+                        </view>
+                        <input type="text" name="wechatD" />
+                    </view>
+                    <view class="markone">
+                        <view class="markoneO">
+                            <view class="word">工作单位</view>
+                            <view style="color: red;line-height: 100rpx;">*</view>
+                        </view>
+                        <input type="text" name="companyNameD" />
+                    </view>
+                </view>
+				<view data-key='explainAndNeedD' data-val="{{explainAndNeedD}}" bindtap="changeCommentBox" style="border-bottom: 1rpx solid #E7E7E7;" class="qita">
+				    <view>
+				        <view class="word">需求描述/反馈/申诉：</view>
+				    </view>
+					<view>{{explainAndNeedD}}</view>
+				</view>
+               <!-- <view class="consumer">
+                    <view class="consumerbottom" style="border-bottom: 1rpx solid #E7E7E7;flex-direction: column;height: 150rpx;">
+                       <view>
+                            <view class="word">需求描述/反馈/申诉：</view>
+							<input style="width: 95%;" type="text" name="explainAndNeedD" />
+                        </view>
+                    </view>
+                </view> -->
+                <!-- 立即提交 -->
+                <view class="foot" style="margin-top: 20rpx">
+                    <button formType="submit">立即提交</button>
+                </view>
+            </form>
+        </view>
+    </view>
+</view>
+<view hidden="{{CommentBox}}" catchtap="closeCommentBox" catchtouchmove="move" class="back-page" >
+    <view class="release">
+        <textarea 
+		autoFocus="{{autoFocusBol}}" 
+		autoHeight="true" 
+		bindblur="hideKeyboard" 
+		bindinput="setValue" 
+		catchtap="catchBubble" 
+		class="text" 
+		cursorSpacing="20" 
+		fixed="true" 
+		focus="{{autoFocusBol}}"
+		placeholderClass="input_null" 
+		showConfirmBar="" 
+		value="{{commentValue}}"></textarea>
+        <view catchtap="checkContent" class="submit">完成</view>
+    </view>
+</view>

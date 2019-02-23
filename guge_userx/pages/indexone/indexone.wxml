@@ -1,0 +1,448 @@
+<view class="box">
+	<!-- 用户信息 -->
+	<view class="header_user">
+		<view class="header_user_left">
+			<image src="../../static/img/index/index_user.png" />
+			<view>
+				<view style="width: 150rpx;">姓名</view>
+				<view style="width: auto;">公司名称</view>
+			</view>
+		</view>
+		<view class="header_user_right">
+			<image src="../../static/img/index/weidu.png" />
+			<image src="../../static/img/index/feed.png" />
+			<image src="../../static/img/index/index_logon.png" />
+		</view>
+	</view>
+
+	<!--轮播-->
+	<swiper indicator-dots="{{indicatorDots}}" current="{{current}}" bindchange="bindchange" bindanimationfinish="bindanimationfinish"
+	 autoplay="{{autoplay}}" duration="{{duration}}" display-multiple-items="{{displaymultipleitems}}" previous-margin="40rpx"
+	 next-margin="40rpx">
+		<swiper-item>
+			<view class="slide-image" style="background: #BFCF92">
+				<view bindtap="dividend" class="one">
+					<view class="onetop">
+						已到手收益（元）
+					</view>
+					<view class="onebottom">
+						￥{{dateFr.formatNum(0)}}
+					</view>
+				</view>
+				<view class="two">
+					<view bindtap="dividend" class="twoleft">
+						<view>
+							本期累积收益
+						</view>
+						<view>
+							￥{{dateFr.formatNum(0)}}
+						</view>
+					</view>
+					<view class="twocenter">
+
+					</view>
+					<view bindtap="dividend" class="tworight">
+						<view>
+							昨日新增收益
+						</view>
+						<view>
+							￥{{dateFr.formatNum(0)}}
+						</view>
+					</view>
+				</view>
+			</view>
+		</swiper-item>
+		<swiper-item>
+			<view class="slide-image" style="background: #E1CA9F">
+				<view bindtap="dividend" class="one location">
+					<image src="../../static/img/index/shoushi.gif" hidden="{{!imgBol}}" catchtap="alertexercise" />
+					<image src="../../static/img/index/bixin.png" hidden="{{imgBol}}" catchtap="alertaeart" />
+					<view class="onetop">
+						已行权股数
+					</view>
+					<view class="onebottom">
+						{{0}}
+					</view>
+				</view>
+				<view class="two">
+					<view bindtap="dividend" class="twoleft">
+						<view>
+							已成熟股数
+							<a href="JavaScript:;">(本期)</a>
+						</view>
+						<view>
+							{{0}}
+						</view>
+
+					</view>
+					<view class="twocenter">
+
+					</view>
+					<view bindtap="dividend" class="tworight">
+						<view>
+							待行权股数
+							<a href="JavaScript:;">(累积)</a>
+						</view>
+						<view>
+							{{0}}
+						</view>
+					</view>
+				</view>
+			</view>
+		</swiper-item>
+		<!--  -->
+		<swiper-item>
+			<view class="slide-image" style="background: #7FCBCF;">
+				<ec-canvas id="mychart-dom-pie" canvas-id="mychartPie" ec="{{ ec }}" mhidden="{{canvas}}"></ec-canvas>
+				<image wx:if="{{canvasImgUrlBol}}" class="canvas-img" style="width: 95%;height: 79%;position: absolute;top: 1%;left: 2.5%;border-radius: 5%;"
+				 src="{{canvasImgUrl}}" />
+				<progress percent="{{0/0*100}}" activeColor="#ed9d79" backgroundColor="white" active />
+				<view class="shu">
+					<text>
+						{{0}} / {{0}}(本期)
+					</text>
+				</view>
+			</view>
+		</swiper-item>
+	</swiper>
+	<!--概览-->
+	<view class="main">
+		<view bindtap="dividend" class="mainleft">
+			<image src="../../static/img/index/gailan.png" />
+			<view class="Overview">
+				<view>概览</view>
+				<view>Overview</view>
+			</view>
+		</view>
+		<view class="mainright">
+			<view class="maintop">
+				<view bindtap="dividend" class="mainone">
+					<viwe>
+						{{0}}股
+					</viwe>
+					<viwe style="background-color: #7fc3c6;">
+						获授总数
+					</viwe>
+				</view>
+				<view  bindtap="dividend" class="mainone">
+					<viwe>
+						{{0}}个月
+					</viwe>
+					<viwe style="background-color: #e59b7b;">
+						成熟期
+					</viwe>
+				</view>
+			</view>
+			<view class="mainbottom" style="margin-top: 17rpx">
+				<view bindtap="dividend" class="mainone">
+					<viwe>
+						{{0}}元/股
+					</viwe>
+					<viwe style="background-color: #e5cca1;">
+						当前价值
+					</viwe>
+				</view>
+				<view bindtap="dividend" class="mainone">
+					<viwe>
+						{{0}}元/股
+					</viwe>
+					<viwe style="background-color: #bcca92;">
+						行权价
+					</viwe>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!--变现-->
+	<view class="realization">
+		<view bindtap="dividend" class="mainleft">
+			<image src="../../static/img/index/bianxian.png" />
+			<view class="Overview">
+				<view>变现</view>
+				<view>Liquidity</view>
+			</view>
+		</view>
+		<view class="mainright">
+			<view class="maintop">
+				<view class="mainone" bindtap="performance">
+					<!-- <image src="../../static/img/index/jixiao.png" /> -->
+					<image style="width: 33rpx;height: 52rpx;" src="../../static/img/index/jixiao.png" />
+					<view>绩效</view>
+				</view>
+				<view class="mainone" bindtap="dividend">
+					<image style="width: 46rpx;height: 47rpx;" src="../../static/img/index/fenhong.png" />
+					<view>分红</view>
+				</view>
+			</view>
+			<view class="mainbottom" style="margin-top: 18rpx">
+				<view class="mainone" bindtap="sell">
+					<image style="width: 37rpx;height: 47rpx;" src="../../static/img/index/chushou.png" />
+					<view>转让</view>
+				</view>
+				<view class="mainone" bindtap="dimission">
+					<image style="width: 56rpx;height: 36rpx;" src="../../static/img/index/tuigu.png" />
+					<view>回购</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!--存证-->
+	<view class="inventories">
+		<view class="inventoriesleft">
+			<image src="../../static/img/index/cunzheng.png" />
+			<view class="Overview">
+				<view>存证</view>
+				<view>Escrow</view>
+			</view>
+		</view>
+		<view class="inventoriesright">
+			<view bindtap="plan">
+				<view>激励计划</view>
+				<image style="width: 133rpx;height: 80rpx;" src="../../static/img/index/jili.png" />
+			</view>
+			<view bindtap="agreement">
+				<view style="margin-bottom: 2rpx;">授予协议</view>
+				<image style="width: 89rpx;height: 80rpx;" src="../../static/img/index/xieyi.png" />
+			</view>
+		</view>
+	</view>
+	<!--指引-->
+	<view class="employ">
+		<view class="employmain" style="background-color: #9ED1DF;" bindtap="goFile">
+			<!-- <image src="../../static/img/index/peitao.png" /> -->
+			<view style="font-size: 24rpx;">
+				<view>配</view>
+				<view>套</view>
+				<view>文</view>
+				<view>件</view>
+			</view>
+			<view style="font-size: 18rpx;">Supporting files</view>
+		</view>
+		<view class="employmain" style="background-color: #EB8584;" bindtap="activate">
+			<!-- <image src="../../static/img/index/jihuo.png" /> -->
+			<view style="font-size: 24rpx;">
+				<view>自</view>
+				<view>主</view>
+				<view>激</view>
+				<view>活</view>
+			</view>
+			<view style="font-size: 18rpx;">Activate Now</view>
+		</view>
+	</view>
+
+
+
+
+
+	<!--打开绩效模态框-->
+	<view class="mark" hidden="{{alertperformance}}" catchtouchmove="move">
+		<view class="mark_content">
+			<image class="close" src="../../static/img/activate/close.png" bindtap="closePerformance" />
+			<view class="dimission" style="margin-top:174rpx;">
+				<view>先生/女士，</view>
+				<view>您当前的绩效考核为：</view>
+			</view>
+			<view class="dimissionfoot" style="margin-top:140rpx;">
+				<view style="background: #80C9CD;" bindtap="closePerformance">我知道了</view>
+				<view style="color: #80C9CD;" bindtap="goPerformance">查看绩效制度</view>
+			</view>
+		</view>
+	</view>
+	<!--打开出售模态框-->
+	<view class="mark" hidden="{{alertsell}}" catchtouchmove="move">
+		<view class="mark_content">
+			<image class="close" src="../../static/img/activate/close.png" bindtap="closeSell" />
+			<view class="dimission" style="margin-top:174rpx;">
+				<view>先生/女士，</view>
+				<view>您的所属公司：</view>
+			</view>
+			<view class="dimissionfoot" style="margin-top:140rpx;">
+				<view style="background: #80C9CD;" bindtap="closeSell">我知道了</view>
+				<view style="color: #80C9CD;" bindtap="goSell">查看出售制度</view>
+			</view>
+		</view>
+	</view>
+	<!--打开激励计划模态框-->
+	<view class="mark" hidden="{{alertplan}}" catchtouchmove="move">
+		<view class="mark_content">
+			<image class="close" src="../../static/img/activate/close.png" bindtap="closePlan" />
+			<view class="dimission" style="margin-top:174rpx;">
+				<view>期管云已接受公司委托，</view>
+				<view>代为存证和管理激励计划</view>
+			</view>
+			<view class="dimissionfoot" style="margin-top:140rpx;">
+				<view style="background: #80C9CD;" bindtap="closePlan">我知道了</view>
+				<view style="color: #80C9CD;" bindtap="goPlan">查看激励计划</view>
+			</view>
+		</view>
+	</view>
+	<!--打开授予协议模态框-->
+	<view class="mark" hidden="{{alertagreement}}" catchtouchmove="move">
+		<view class="mark_content">
+			<image class="close" src="../../static/img/activate/close.png" bindtap="closeAgreement" />
+			<view class="dimission" style="margin-top:174rpx;">
+				<view>期管云已联合法大大，</view>
+				<view>代您提供授予协议电子签约</view>
+			</view>
+			<view class="dimissionfoot" style="margin-top:140rpx;">
+				<view style="background: #80C9CD;" bindtap="closeAgreement">前往签约</view>
+				<view style="color: #80C9CD;" bindtap="goAgreement">查看授予协议</view>
+			</view>
+		</view>
+	</view>
+
+	<!--分红模态框-->
+	<view class="mark" hidden="{{alertDividend}}" catchtouchmove="move">
+		<view class="mark_content">
+			<image class="close" src="../../static/img/activate/close.png" bindtap="closeDividend" />
+			<view class="fenhong">分红</view>
+			<view class="markmain">
+				<view>依据公司的盈利状况，在分红期到来前，</view>
+				<view>您已累计可获分红</view>
+			</view>
+			<view class="money">
+				<text>{{0}}</text> 元
+			</view>
+			<!-- <view class="base" bindtap="closeDividend">
+                好的，我继续努力
+            </view> -->
+			<view class="dimissionfoot">
+				<view style="background: #80C9CD;" bindtap="closeDividend">我知道了</view>
+				<view style="color: #80C9CD;">查看分红制度</view>
+			</view>
+		</view>
+	</view>
+	<!--打开回购模态框-->
+	<view class="mark" hidden="{{alertDimission}}" catchtouchmove="move">
+		<view class="mark_content">
+			<image class="close" src="../../static/img/activate/close.png" bindtap="closedimission" />
+			<view class="fenhong">回购</view>
+			<view class="dimission">
+				<view>先生/女士，</view>
+				<view>依据公司的《激励计划》与您的《授予协议》，</view>
+				<view>现在回购，您的所有已行权股数将被收回，</view>
+				<view>并且公司会为您补偿现金
+					<text style="color: #80C9CD">{{0}}</text> 元
+				</view>
+			</view>
+			<view class="dimissionfoot">
+				<view style="background: #80C9CD;" bindtap="clickdimission">回购</view>
+				<view style="color: #80C9CD;" bindtap="closedimission">取消</view>
+			</view>
+		</view>
+	</view>
+	<!--点击离职模态框-->
+	<view class="mark" hidden="{{clickDimission}}" catchtouchmove="move">
+		<view class="mark_content">
+			<image class="close" src="../../static/img/activate/close.png" bindtap="closedimission" />
+			<view class="clickDimissionP">您真的确定要回购吗？</view>
+			<view class="dimissionfoot" style="margin-top: 167rpx">
+				<view style="background: #80C9CD;" bindtap="affirmdimission">确定</view>
+				<view style="color: #80C9CD;" bindtap="closedimission">取消</view>
+			</view>
+		</view>
+	</view>
+	<!--确认离职模态框-->
+	<view class="mark" hidden="{{affirmDimission}}" catchtouchmove="move">
+		<view class="mark_content">
+			<image class="close" src="../../static/img/activate/close.png" bindtap="closedimission" />
+			<view class="markmain" style="font-size: 36rpx;line-height: 54rpx;padding-top: 143rpx;margin-bottom: 117rpx">
+				<view>公司已收到您的回购申请，</view>
+				<view>将及时审核。</view>
+				<view>感谢您为公司作出的贡献！</view>
+			</view>
+			<view class="base" bindtap="closedimission">
+				我知道了
+			</view>
+		</view>
+	</view>
+	<!--比心手势模态框-->
+	<view class="mark" hidden="{{alertAeart}}" catchtouchmove="move">
+		<view class="mark_content">
+			<image class="close" src="../../static/img/activate/close.png" bindtap="closeaeart" />
+			<view class="fenhong" style="margin-bottom: 1.72rem">行权</view>
+			<image class="gantan" src="../../static/img/index/gantan.png" />
+			<view class="dimission" style="margin-bottom: 24rpx">
+				<view>先生/女士，</view>
+				<view>您当前还没有可行权股数，</view>
+				<view>距离下次可行权还有
+					<span style="color: #80C9CD">{{numDay}}</span>天。</view>
+			</view>
+			<!-- <view class="base" style="margin-top: 0" bindtap="closeaeart">
+                好的，我要去工作了
+            </view> -->
+			<view class="dimissionfoot" style="margin-top: 0">
+				<view style="background: #80C9CD;" bindtap="closeaeart">我知道了</view>
+				<view style="color: #80C9CD;" bindtap="goFingerpost">使用指引</view>
+			</view>
+		</view>
+	</view>
+	<!--打开行权-->
+	<view class="mark" hidden="{{alertExercise}}" catchtouchmove="move">
+		<image class="dong" src="../../static/img/index/dong.gif" hidden="{{check}}" />
+		<view class="mark_content" hidden="{{!check}}">
+			<image class="close" src="../../static/img/activate/close.png" bindtap="closeexercise" />
+			<view class="fenhong">行权</view>
+			<view class="dimission">
+				<view>您当前累积可行权股数为{{0}}，</view>
+				<view>行权价为{{0}}元/股</view>
+			</view>
+			<view class="exercisemain">
+				<view>行权股数：</view>
+				<input type="digit" placeholder="请输入本次行权股数" value="{{pilesNum}}" bindinput="pilesNumInput" />
+			</view>
+			<view class="dimissionfoot">
+				<view style="background: #80C9CD;letter-spacing: 0;" bindtap="generateexercise">生成行权申请书</view>
+				<view style="color: #80C9CD;" bindtap="closeexercise">取消</view>
+			</view>
+		</view>
+	</view>
+	<!--生成行权申请书-->
+	<view class="mark" hidden="{{generateExercise}}" catchtouchmove="move">
+		<view class="mark_content">
+			<image class="close" src="../../static/img/activate/close.png" bindtap="closeexercise" />
+			<view class="fenhong">行权申请书</view>
+			<view class="dimission">
+				<view>本人，现有{{0}}股期权累积可行权，</view>
+				<view>特向公司申请以{{0}}元/股的价格，</view>
+				<view>对其中
+					<text style="color: #80C9CD">{{0}}</text> 股予以行权，行权价合计
+					<text style="color: #80C9CD">{{0*0}}</text> 元。
+				</view>
+				<view>请予批准。</view>
+			</view>
+			<view class="dimissionfoot">
+				<view style="background: #80C9CD;" bindtap="sendexercise">发送</view>
+				<view style="color: #80C9CD;" bindtap="closeexercise">取消</view>
+			</view>
+		</view>
+	</view>
+	<!--发送-->
+	<view class="mark" hidden="{{sendExercise}}" catchtouchmove="move">
+		<view class="mark_content">
+			<image class="close" src="../../static/img/activate/close.png" bindtap="closeexercise" />
+			<view class="markmain" style="font-size: 36rpx;line-height: 54rpx;padding-top: 157rpx;margin-bottom: 165rpx">
+				<view>公司已收到您的行权申请，</view>
+				<view>将及时审核，请耐心等待。</view>
+			</view>
+			<view class="base" style="letter-spacing: 2px;" bindtap="closeexercise">
+				我知道了
+			</view>
+		</view>
+	</view>
+	<!--温馨提示-->
+	<view class="mark" hidden="{{alertHint}}" catchtouchmove="move">
+		<view class="mark_content">
+			<image class="close" src="../../static/img/activate/close.png" bindtap="closeHint" />
+			<view class="fenhong" style="margin-bottom:118rpx;">温馨提示：</view>
+			<view class="dimission">
+				<view>您需要首先注册，</view>
+				<view>才可以继续使用“期管云”。</view>
+			</view>
+			<view class="base" style="letter-spacing: 2px;margin-top:110rpx" bindtap="goLogin">
+				好的，我现在就去注册
+			</view>
+		</view>
+	</view>
+</view>
+<wxs module="dateFr" src="../../filter/formatNum.wxs"></wxs>

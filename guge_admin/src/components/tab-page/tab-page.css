@@ -1,0 +1,117 @@
+.tab_left {
+  width: 150px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.tab_left .tab_left_log {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #F4F8F9;
+}
+.tab_left .tab_left_log img {
+  width: 70px;
+  height: 35px;
+}
+.tab_left ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.tab_left ul .tab_false,
+.tab_left ul .tab_true {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #8E8E8E;
+  box-sizing: border-box;
+}
+.tab_left ul .tab_false img,
+.tab_left ul .tab_true img {
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+}
+.tab_left ul .tab_false .nopitch,
+.tab_left ul .tab_true .nopitch {
+  display: inline-block;
+}
+.tab_left ul .tab_false .pitch,
+.tab_left ul .tab_true .pitch {
+  display: none;
+}
+.tab_left ul li:hover,
+.tab_left ul .tab_true {
+  background: rgba(52, 110, 188, 0.1);
+  color: #346EBC;
+  border-left: 3px solid #346EBC;
+  box-sizing: border-box;
+}
+.tab_left ul li:hover .nopitch,
+.tab_left ul .tab_true .nopitch {
+  display: none;
+}
+.tab_left ul li:hover .pitch,
+.tab_left ul .tab_true .pitch {
+  display: inline-block;
+}
+.tab_left ul li:nth-child(5) {
+  margin-top: 50px;
+}
+.tab_min {
+  width: 60px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.tab_min .tab_left_log {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #F4F8F9;
+}
+.tab_min .tab_left_log img {
+  width: 60px;
+}
+.tab_min .tab_left_log .logmin {
+  width: 35px;
+  margin: 5px 0;
+}
+.tab_min ul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.tab_min ul li {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tab_min ul li img {
+  width: 22px;
+  height: 22px;
+  margin-left: 5px;
+}
+.tab_min ul li:nth-child(5) {
+  margin-top: 50px;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: right .3s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

@@ -1,0 +1,4 @@
+/* pages/privacy/privacy.wxss */
+image{
+  width: 100%;
+}

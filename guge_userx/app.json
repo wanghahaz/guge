@@ -1,0 +1,33 @@
+{
+    "pages": [
+        "pages/login/login",
+        "pages/activate/activate",
+        "pages/file/file",
+        "pages/index/index",
+        "pages/feed/index",
+        "pages/feedList/index",
+        "pages/indexone/indexone",
+        "pages/succeed/succeed",
+        "pages/mailbox/mailbox",
+        "pages/textOne/textOne",
+        "pages/textTwo/textTwo",
+        "pages/textThree/textThree",
+        "pages/textFive/textFive",
+        "pages/textSix/textSix",
+        "pages/protocol/protocol",
+        "pages/imgStimulate/imgStimulate",
+        "pages/imgAward/imgAward",
+        "pages/imgContract/imgContract",
+        "pages/imgKnowledge/imgKnowledge",
+        "pages/fddExtsign/fddExtsign",
+        "pages/fddQuerySignStatus/fddQuerySignStatus",
+        "pages/signature/signature",
+        "pages/privacy/privacy"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "期管云CSP|云端持股平台",
+        "navigationBarTextStyle": "black"
+    }
+}

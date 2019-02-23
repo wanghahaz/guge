@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "期管云CSP|云端持股平台",
+    "usingComponents": {
+        "ec-canvas": "../../ec-canvas/ec-canvas"
+    }
+}

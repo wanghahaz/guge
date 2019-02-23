@@ -1,0 +1,20 @@
+textarea {
+    width: 90%;
+    margin: 10rpx 0 0 5%;
+    border: 1px solid #dcdee2;
+    border-radius: 5px;
+}
+
+.btn {
+    position: relative;
+    width: 90%;
+    margin: 0.5rem 0 0 5%;
+    display: flex;
+    justify-content: right;
+}
+
+button {
+    position: absolute;
+    right: 0;
+    padding: 0
+}

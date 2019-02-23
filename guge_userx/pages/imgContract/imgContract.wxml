@@ -1,0 +1,8 @@
+<view>
+    <import src="../../wxParse/wxParse.wxml" />
+    <template is="wxParse" data="{{wxParseData:performance.nodes}}" hidden="{{!textBol}}" />
+    <view class="tu" hidden="{{textBol}}">
+        <image src="../../static/img/index/cuowu.png" />
+        <view>暂无内容</view>
+    </view>
+</view>

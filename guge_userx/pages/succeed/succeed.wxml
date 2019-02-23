@@ -1,0 +1,18 @@
+<view class="succeed">
+    <view class="main">
+        <view class="miantop">
+            <image src="../../static/img/activate/duigou.png"/>
+        </view>
+        <view class="miancenter">
+            <view>我们已收到您的激活申请，</view>
+            <view>并将及时为您开通"期管云"管理账户</view>
+        </view>
+    </view>
+    <view class="footer" bindtap="goIndex">
+        我知道了
+    </view>
+    <view class="logo">
+        <image src="../../static/img/activate/ma.png"/>
+        <view>客服电话/微信：19920199920</view>
+    </view>
+</view>

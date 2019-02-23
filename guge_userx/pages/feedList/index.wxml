@@ -1,0 +1,14 @@
+<view>
+    <view class="feedList">
+        <view class="content" wx:for="{{feedList}}" wx:key='{{index}}'>
+            <view>
+                <span>通知时间：</span>
+                <span>{{item.createTime}}</span>
+            </view>
+            <view>
+                <span style="display:block;flex:1">通知内容：</span>
+                <span style="display:block;flex:3.6">{{item.noticeContent}}</span>
+            </view>
+        </view>
+    </view>
+</view>
